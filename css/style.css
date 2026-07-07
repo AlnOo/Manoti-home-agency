@@ -394,7 +394,7 @@ section.home {
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    margin-top: 25px;
+    margin-top: 50px;
     flex-wrap: nowrap; /* Always stay on one line */
 }
 
