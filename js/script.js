@@ -10,30 +10,22 @@ toggle.addEventListener("click", () => {
     navigation.classList.toggle("active");
 });
 
+function setValue(id, value) {
+
+    const element = document.getElementById(id);
+
+    if (!element) return;
+
+    element.textContent = value || "";
+
+}
 
 // ===========================
-// PROFILE MODAL
+// UNIVERSAL PROFILE MODAL
 // ===========================
 
 const modal = document.getElementById("profileModal");
 const closeBtn = document.querySelector(".close-btn");
-
-const profileImage = document.getElementById("profileImage");
-const profileName = document.getElementById("profileName");
-const profileTown = document.getElementById("profileTown");
-const profileAge = document.getElementById("profileAge");
-const profileSalary = document.getElementById("profileSalary");
-const profileDaily = document.getElementById("profileDaily");
-const profileExperience = document.getElementById("profileExperience");
-const profileBadge = document.getElementById("profileBadge");
-const profileSkillTag = document.getElementById("profileSkillTag");
-const profileTribe = document.getElementById("profileTribe");
-const profileReligion = document.getElementById("profileReligion");
-const profileEducation = document.getElementById("profileEducation");
-const profileCourse = document.getElementById("profileCourse");
-
-// Optional if you add it to your HTML
-const profileType = document.getElementById("profileType");
 
 document.querySelectorAll(".profile-btn").forEach(button => {
 
@@ -41,30 +33,101 @@ document.querySelectorAll(".profile-btn").forEach(button => {
 
         const card = button.closest(".nanny-card");
 
-        profileImage.src = card.dataset.image;
-        profileImage.alt = card.dataset.name;
+        if (!card) return;
 
-        profileName.textContent = card.dataset.name;
-        profileTown.textContent = card.dataset.town;
-        profileAge.textContent = card.dataset.age;
-        profileSalary.textContent = card.dataset.salary;
-        profileDaily.textContent = card.dataset.daily;
-        profileExperience.textContent = card.dataset.experience;
+        // Image
 
-        profileBadge.textContent = card.dataset.type;
+        const profileImage = document.getElementById("profileImage");
 
-        if(profileType){
-            profileType.textContent = card.dataset.type;
+        if (profileImage) {
+
+            profileImage.src = card.dataset.image || "";
+            profileImage.alt = card.dataset.name || "";
+
         }
 
-        profileSkillTag.textContent = card.dataset.skill;
-        profileTribe.textContent = card.dataset.tribe;
-        profileReligion.textContent = card.dataset.religion;
-        profileEducation.textContent = card.dataset.education;
-        profileCourse.textContent = card.dataset.course;
+        // Basic Information
+
+        setValue("profileName", card.dataset.name);
+        setValue("profileTown", card.dataset.town);
+
+        // ---------- NANNY ----------
+
+        setValue("profileAge", card.dataset.age);
+
+        setValue("profileSalary", card.dataset.salary);
+
+        setValue("profileDaily", card.dataset.daily);
+
+        setValue("profileSkillTag", card.dataset.skill);
+
+        setValue("profileTribe", card.dataset.tribe);
+
+        setValue("profileReligion", card.dataset.religion);
+
+        setValue("profileEducation", card.dataset.education);
+
+        setValue("profileCourse", card.dataset.course);
+
+        setValue(
+            "profileExperience",
+            card.dataset.experience
+                ? card.dataset.experience + " Years"
+                : ""
+        );
+
+        // ---------- PROFESSIONAL ----------
+
+        setValue("profileService", card.dataset.service);
+
+        setValue(
+            "profileRate",
+            card.dataset.rate
+                ? "KES " + card.dataset.rate + " / Day"
+                : ""
+        );
+
+        setValue("profileJobs", card.dataset.jobs);
+
+        setValue(
+            "profileRating",
+            card.dataset.rating
+                ? card.dataset.rating + " ★"
+                : ""
+        );
+
+        setValue(
+            "profileRatingValue",
+            card.dataset.rating
+                ? card.dataset.rating + " / 5"
+                : ""
+        );
+
+        setValue("profileProject", card.dataset.project);
+
+        setValue("profileAvailability", card.dataset.availability);
+
+        setValue("profileEmergency", card.dataset.emergency);
+
+        setValue("profileTools", card.dataset.tools);
+
+        // Badge
+
+        const badge = document.getElementById("profileBadge");
+
+        if (badge) {
+
+            badge.textContent =
+                card.dataset.type ||
+                card.dataset.availability ||
+                "";
+
+        }
 
         modal.style.display = "flex";
+
         document.body.style.overflow = "hidden";
+
     });
 
 });
@@ -74,29 +137,57 @@ document.querySelectorAll(".profile-btn").forEach(button => {
 // CLOSE MODAL
 // ===========================
 
-closeBtn.addEventListener("click", closeModal);
-
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
-
 function closeModal() {
+
+    if (!modal) return;
+
     modal.style.display = "none";
+
     document.body.style.overflow = "auto";
+
 }
+
+if (closeBtn) {
+
+    closeBtn.addEventListener("click", closeModal);
+
+}
+
+window.addEventListener("click", e => {
+
+    if (e.target === modal) {
+
+        closeModal();
+
+    }
+
+});
 
 //==========================
 // PREMIUM FILTER
 //==========================
 
 const searchFilter = document.getElementById("searchFilter");
+
+const serviceFilter = document.getElementById("serviceFilter");
+
 const townFilter = document.getElementById("townFilter");
-const salaryFilter = document.getElementById("salaryFilter");
-const ageFilter = document.getElementById("ageFilter");
-const typeFilter = document.getElementById("typeFilter");
+
+const rateFilter = document.getElementById("rateFilter");
+
 const experienceFilter = document.getElementById("experienceFilter");
+
+const availabilityFilter = document.getElementById("availabilityFilter");
+
+const ratingFilter = document.getElementById("ratingFilter");
+
+const verifiedFilter = document.getElementById("verifiedFilter");
+
+const serviceTypeFilter = document.getElementById("serviceTypeFilter");
+
+const emergencyFilter = document.getElementById("emergencyFilter");
+
+const toolsFilter = document.getElementById("toolsFilter");
 
 const resetFilters = document.getElementById("resetFilters");
 
@@ -104,106 +195,206 @@ const cards = document.querySelectorAll(".nanny-card");
 
 const noResults = document.getElementById("noResults");
 
+const salaryFilter = document.getElementById("salaryFilter");
+
+const ageFilter = document.getElementById("ageFilter");
+
+const typeFilter = document.getElementById("typeFilter");
+
 function filterCards(){
 
-let visible = 0;
+    let visible = 0;
 
-cards.forEach(card=>{
+    cards.forEach(card=>{
 
-let show = true;
+        let show = true;
 
-const name = card.dataset.name.toLowerCase();
-const town = card.dataset.town;
-const salary = Number(card.dataset.salary);
-const age = Number(card.dataset.age);
-const type = card.dataset.type;
-const experience = Number(card.dataset.experience);
+        const name = card.dataset.name.toLowerCase();
 
-// Search
+        const service = card.dataset.service || "";
 
-if(searchFilter.value!=""){
+        const town = card.dataset.town || "";
 
-if(!name.includes(searchFilter.value.toLowerCase()))
-show=false;
+        const rate = Number(card.dataset.rate || "");
 
-}
+        const experience = Number(card.dataset.experience || "");
 
-// Town
+        const rating = Number(card.dataset.rating || "");
 
-if(townFilter.value!="" && town!=townFilter.value)
-show=false;
+        const verified = card.dataset.verified || "";
 
-// Employment
+        const availability = card.dataset.availability || "";
 
-if(typeFilter.value!="" && type!=typeFilter.value)
-show=false;
+        const project = card.dataset.project || "";
 
-// Salary
+        const tools = card.dataset.tools || "";
 
-if(salaryFilter.value=="15000" && salary>=15000)
-show=false;
+        // Search
 
-if(salaryFilter.value=="20000" && (salary<15000 || salary>20000))
-show=false;
+        if(searchFilter.value !== ""){
 
-if(salaryFilter.value=="99999" && salary<=20000)
-show=false;
+            const search = searchFilter.value.toLowerCase();
 
-// Age
+            if(
+                !name.includes(search) &&
+                !service.toLowerCase().includes(search)
+            ){
+                show = false;
+            }
 
-if(ageFilter.value=="30" && (age<20 || age>30))
-show=false;
+        }
 
-if(ageFilter.value=="40" && (age<31 || age>40))
-show=false;
+        // Profession
 
-if(ageFilter.value=="41" && age<41)
-show=false;
+        if(serviceFilter.value !== "" && service !== serviceFilter.value)
+            show = false;
 
-// Experience
+        // Town
 
-if(experienceFilter.value!=""){
+        if(townFilter.value !== "" && town !== townFilter.value)
+            show = false;
 
-if(experience<Number(experienceFilter.value))
-show=false;
+        // Budget
 
-}
+        if(rateFilter.value === "2000" && rate >= 2000)
+            show = false;
 
-card.style.display = show ? "" : "none";
+        if(rateFilter.value === "5000" && (rate < 2000 || rate > 5000))
+            show = false;
 
-if(show) visible++;
+        if(rateFilter.value === "99999" && rate <= 5000)
+            show = false;
 
-});
+        // Experience
 
-noResults.style.display = visible ? "none" : "block";
+        if(experienceFilter.value !== ""){
+
+            if(experience < Number(experienceFilter.value))
+                show = false;
+
+        }
+
+        // Availability
+
+        if(
+            availabilityFilter.value !== "" &&
+            availability !== availabilityFilter.value
+        ){
+            show = false;
+        }
+
+        // Rating
+
+        if(ratingFilter.value !== ""){
+
+            let minimum = 3;
+
+            if(ratingFilter.value.includes("5"))
+                minimum = 5;
+
+            else if(ratingFilter.value.includes("4"))
+                minimum = 4;
+
+            if(rating < minimum)
+                show = false;
+
+        }
+
+        // Verified
+
+        if(
+            verifiedFilter.value === "Verified Professionals" &&
+            verified !== "yes"
+        ){
+            show = false;
+        }
+
+        // Project Type
+
+        if(
+            serviceTypeFilter.value !== "" &&
+            project !== serviceTypeFilter.value &&
+            project !== "Both"
+        ){
+            show = false;
+        }
+
+        // Emergency
+
+        if(
+            emergencyFilter.value === "Available 24/7" &&
+            availability !== "Available Today"
+        ){
+            show = false;
+        }
+
+        // Own Tools
+
+        if(
+            toolsFilter.value === "Owns Professional Tools" &&
+            tools !== "Own Tools"
+        ){
+            show = false;
+        }
+
+        card.style.display = show ? "" : "none";
+
+        if(show) visible++;
+
+    });
+
+    noResults.style.display = visible ? "none" : "block";
 
 }
 
 // Events
 
-searchFilter.addEventListener("keyup",filterCards);
+[
+searchFilter,
+serviceFilter,
+townFilter,
+rateFilter,
+experienceFilter,
+availabilityFilter,
+ratingFilter,
+verifiedFilter,
+serviceTypeFilter,
+emergencyFilter,
+toolsFilter,
+salaryFilter,
+ageFilter,
+typeFilter
+].forEach(filter => {
 
-townFilter.addEventListener("change",filterCards);
+    if (!filter) return;
 
-salaryFilter.addEventListener("change",filterCards);
+    filter.addEventListener(
+        filter.tagName === "INPUT" ? "keyup" : "change",
+        filterCards
+    );
 
-ageFilter.addEventListener("change",filterCards);
-
-typeFilter.addEventListener("change",filterCards);
-
-experienceFilter.addEventListener("change",filterCards);
+});
 
 // Reset
 
-resetFilters.addEventListener("click",()=>{
+if(resetFilters){
 
-searchFilter.value="";
-townFilter.value="";
-salaryFilter.value="";
-ageFilter.value="";
-typeFilter.value="";
-experienceFilter.value="";
+    resetFilters.addEventListener("click",()=>{
 
-filterCards();
+        if(searchFilter) searchFilter.value="";
+        if(serviceFilter) serviceFilter.value="";
+        if(townFilter) townFilter.value="";
+        if(rateFilter) rateFilter.value="";
+        if(experienceFilter) experienceFilter.value="";
+        if(availabilityFilter) availabilityFilter.value="";
+        if(ratingFilter) ratingFilter.value="";
+        if(verifiedFilter) verifiedFilter.value="";
+        if(serviceTypeFilter) serviceTypeFilter.value="";
+        if(emergencyFilter) emergencyFilter.value="";
+        if(toolsFilter) toolsFilter.value="";
 
-});
+        filterCards();
+
+    });
+
+}

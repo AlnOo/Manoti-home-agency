@@ -1,0 +1,4754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/MHAlogo.jpg" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Deluxe housing services</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Professional Service Worker</div>
+      <div class="toggle"></div>
+      <div class="navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="social-bar">
+          <ul>
+            <li>
+              <a href="https://facebook.com">
+                <img src="images/facebook.png" target="_blank" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com">
+                <img src="images/twitter.png" target="_blank" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com">
+                <img src="images/instagram.png" target="_blank" alt="" />
+              </a>
+            </li>
+          </ul>
+          <a href="mailto:you@email.com" class="email-icon">
+            <img src="images/email.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="title">
+        <h2>Trusted Professionals for Every Job, Big or Small.</h2>
+        <p>
+          Looking for a trusted professional to get the job done? Whether you need a plumber, electrician, mason, carpenter, painter, gardener, farm hand, welder, technician, or any other skilled worker, our platform connects you with verified professionals ready to deliver quality workmanship. Browse experienced service providers, compare profiles, and hire with confidence for both residential and commercial projects.
+        </p>
+      </div>
+
+
+      <!-- ================= WORKER SECTION ================= -->
+
+<div class="nanny-wrapper">
+
+<!-- ================= PROFESSIONAL FILTER ================= -->
+
+<div class="nanny-filter">
+
+    <h3>Find a Professional</h3>
+
+    <div class="filter-row">
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="searchFilter"
+            placeholder="Search by name or profession...">
+
+        <!-- Profession -->
+        <select id="serviceFilter">
+            <option value="">All Services</option>
+            <option>Plumber</option>
+            <option>Electrician</option>
+            <option>Carpenter</option>
+            <option>Mason</option>
+            <option>Painter</option>
+            <option>Welder</option>
+            <option>Gardener</option>
+            <option>Farm Hand</option>
+            <option>Tiler</option>
+            <option>Mechanic</option>
+            <option>Cleaner</option>
+            <option>Roofer</option>
+            <option>Borehole Technician</option>
+            <option>Solar Technician</option>
+            <option>CCTV Installer</option>
+            <option>General Fundi</option>
+        </select>
+
+        <!-- Town -->
+        <select id="townFilter">
+            <option value="">All Towns</option>
+            <option>Nairobi</option>
+            <option>Mombasa</option>
+            <option>Kisumu</option>
+            <option>Nakuru</option>
+            <option>Eldoret</option>
+            <option>Thika</option>
+            <option>Machakos</option>
+            <option>Kiambu</option>
+        </select>
+
+        <!-- Budget -->
+        <select id="rateFilter">
+            <option value="">Budget</option>
+            <option>Under KES 2,000</option>
+            <option>KES 2,000 - 5,000</option>
+            <option>KES 5,000 - 10,000</option>
+            <option>Above KES 10,000</option>
+        </select>
+
+        <!-- Experience -->
+        <select id="experienceFilter">
+            <option value="">Experience</option>
+            <option>1+ Years</option>
+            <option>3+ Years</option>
+            <option>5+ Years</option>
+            <option>10+ Years</option>
+            <option>15+ Years</option>
+        </select>
+
+        <!-- Availability -->
+        <select id="availabilityFilter">
+            <option value="">Availability</option>
+            <option>Available Today</option>
+            <option>Available Tomorrow</option>
+            <option>This Week</option>
+            <option>Weekends Only</option>
+            <option>Full-Time</option>
+            <option>Part-Time</option>
+            <option>Contract</option>
+        </select>
+
+        <!-- Rating -->
+        <select id="ratingFilter">
+            <option value="">Minimum Rating</option>
+            <option>★★★★★ (5 Stars)</option>
+            <option>★★★★☆ & Up</option>
+            <option>★★★☆☆ & Up</option>
+        </select>
+
+        <!-- Verified -->
+        <select id="verifiedFilter">
+            <option value="">Verification</option>
+            <option>Verified Professionals</option>
+            <option>All Professionals</option>
+        </select>
+
+        <!-- Service Type -->
+        <select id="serviceTypeFilter">
+            <option value="">Project Type</option>
+            <option>Residential</option>
+            <option>Commercial</option>
+            <option>Both</option>
+        </select>
+
+        <!-- Emergency -->
+        <select id="emergencyFilter">
+            <option value="">Emergency Service</option>
+            <option>Available 24/7</option>
+            <option>Same Day Service</option>
+            <option>Scheduled Jobs</option>
+        </select>
+
+        <!-- Own Tools -->
+        <select id="toolsFilter">
+            <option value="">Equipment</option>
+            <option>Owns Professional Tools</option>
+            <option>Client Provides Tools</option>
+        </select>
+
+        <!-- Reset -->
+        <button id="resetFilters">
+            Reset Filters
+        </button>
+
+    </div>
+
+</div>
+
+<p id="noResults" style="display:none;text-align:center;margin:40px;font-size:20px;">
+    No professionals match your search.
+</p>
+
+<!-- ================= WORKER CARDS ================= -->
+
+<div class="nanny-grid-container">
+    <div class="nanny-grid">
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 1 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Mary Otieno"
+    data-image="images/fundi1.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi1.jpg" alt="Mary Otieno">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Mary Otieno</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="John Mwangi"
+    data-image="images/fundi3.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi3.jpg" alt="John Mwangi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>John Mwangi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Clara Muindi"
+    data-image="images/fundi2.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi2.jpg" alt="Clara Muindi">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Clara Muindi</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PROFESSIONAL CARD 2 ================= -->
+
+<div class="nanny-card"
+
+    data-name="Ben Ndiema"
+    data-image="images/fundi4.jpg"
+    data-service="Plumber"
+    data-town="Nairobi"
+    data-rate="2500"
+    data-experience="8"
+    data-rating="4.9"
+    data-jobs="187"
+    data-verified="yes"
+    data-availability="Available Today"
+    data-project="Residential"
+    data-tools="Own Tools">
+
+    <div class="card-image">
+
+        <img src="images/fundi4.jpg" alt="Ben Ndiema">
+
+        <span class="available">
+            Available Today
+        </span>
+
+        <span class="badge stayin">
+            Plumber
+        </span>
+
+        <span class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            Verified
+        </span>
+
+    </div>
+
+    <div class="nanny-info">
+
+        <h3>Ben Ndiema</h3>
+
+        <div class="rating">
+            ★★★★★
+            <span>4.9 (126 Reviews)</span>
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                Nairobi
+            </span>
+
+            <span>
+                <i class="fa-solid fa-briefcase"></i>
+                8 Years Experience
+            </span>
+
+        </div>
+
+        <div class="salary">
+
+            <strong>Starting From</strong>
+
+            <span>KES 2,500 / Day</span>
+
+        </div>
+
+        <div class="details">
+
+            <span>
+                <i class="fa-solid fa-square-check"></i>
+                187 Jobs Completed
+            </span>
+
+            <span>
+                <i class="fa-solid fa-toolbox"></i>
+                Own Tools
+            </span>
+
+        </div>
+
+        <div class="card-skills">
+
+            <span>Pipe Installation</span>
+            <span>Leak Repairs</span>
+            <span>Drain Cleaning</span>
+            <span>Emergency Service</span>
+            <span>Residential</span>
+            <span>Commercial</span>
+
+        </div>
+
+        <div class="card-buttons">
+
+            <button class="profile-btn">
+                View Profile
+            </button>
+
+            <button class="hire-btn">
+                Hire Now
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+</div>
+
+<!-- ================= END PROFESSIONAL CARDs ================= -->
+
+<!-- ================= PROFESSIONAL PROFILE MODAL ================= -->
+
+<div id="profileModal" class="profile-modal">
+
+    <div class="profile-card">
+
+        <span class="close-btn">&times;</span>
+
+        <h2>Professional Profile</h2>
+
+        <div class="profile-top">
+
+            <div class="profile-photo">
+
+                <img id="profileImage" src="" alt="Professional">
+
+                <span id="profileBadge" class="status-badge">
+                    Available Today
+                </span>
+
+            </div>
+
+            <div class="profile-summary">
+
+                <h3 id="profileName"></h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span id="profileRating">4.9 (126 Reviews)</span>
+                </div>
+
+                <p class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="profileTown"></span>
+                </p>
+
+                <p>
+                    <strong>Profession:</strong>
+                    <span id="profileService"></span>
+                </p>
+
+                <p>
+                    <strong>Starting From:</strong>
+                    <span id="profileRate"></span>
+                </p>
+
+                <p>
+                    <strong>Experience:</strong>
+                    <span id="profileExperience"></span>
+                </p>
+
+                <button class="book-btn">
+                    <i class="fa-solid fa-phone"></i>
+                    Request Contact
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ================= TRUST & VERIFICATION ================= -->
+
+        <div class="verification">
+
+            <h4>Trust & Verification</h4>
+
+            <div class="verify-grid">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Verified Professional</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-id-card"></i>
+                    <span>ID Verified</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Phone Verified</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-toolbox"></i>
+                    <span>Own Tools</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-user-check"></i>
+                    <span>Background Checked</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <span>Top Rated</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= SPECIALTIES ================= -->
+
+        <div class="skills-box">
+
+            <h4>Specialties</h4>
+
+            <span class="skill-tag">Pipe Installation</span>
+            <span class="skill-tag">Leak Repairs</span>
+            <span class="skill-tag">Drain Cleaning</span>
+            <span class="skill-tag">Emergency Repairs</span>
+
+        </div>
+
+        <!-- ================= DETAILS ================= -->
+
+        <div class="profile-details">
+
+            <div>
+                <strong>Profession</strong>
+                <span id="profileService"></span>
+            </div>
+
+            <div>
+                <strong>Experience</strong>
+                <span id="profileExperience"></span>
+            </div>
+
+            <div>
+                <strong>Jobs Completed</strong>
+                <span id="profileJobs">187</span>
+            </div>
+
+            <div>
+                <strong>Rating</strong>
+                <span id="profileRatingValue">4.9 / 5</span>
+            </div>
+
+            <div>
+                <strong>Project Type</strong>
+                <span id="profileProject">Residential & Commercial</span>
+            </div>
+
+            <div>
+                <strong>Availability</strong>
+                <span id="profileAvailability">Available Today</span>
+            </div>
+
+            <div>
+                <strong>Emergency Service</strong>
+                <span id="profileEmergency">Yes</span>
+            </div>
+
+            <div>
+                <strong>Own Equipment</strong>
+                <span id="profileTools">Yes</span>
+            </div>
+
+        </div>
+
+        <!-- ================= ABOUT ================= -->
+
+        <div class="references">
+
+            <h4>About the Professional</h4>
+
+            <p id="profileDescription">
+                Experienced professional committed to delivering quality workmanship,
+                timely service, and customer satisfaction for both residential and
+                commercial projects.
+            </p>
+
+        </div>
+
+        <!-- ================= ACTION BUTTONS ================= -->
+
+        <div class="profile-actions">
+
+            <a href="contact.html" class="full-profile">
+                Hire This Professional
+            </a>
+
+            <a href="#" class="message-btn">
+                <i class="fa-solid fa-comment"></i>
+                Send Inquiry
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+      <div class="title" style="padding-top: 50px;">
+        <h1 style="text-align: center;">Simple. Ethical. Transparent</h1>
+        <p>
+          We provide for an ethical and transparent platform to connect your family with potential candidates. Deluxe Home Services simplifies hiring, connecting you with reliable and experienced domestic staff.
+        </p>
+      </div>
+
+      <div class="portfolio">
+        <div class="item">
+          <img src="images/portfolio-item1.jpg" alt="" />
+          <div class="action">
+            <a href="#">Launch</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/portfolio-item2.jpg" alt="" />
+          <div class="action">
+            <a href="#">Launch</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/portfolio-item3.jpg" alt="" />
+          <div class="action">
+            <a href="#">Launch</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
