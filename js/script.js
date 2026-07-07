@@ -1,13 +1,14 @@
+// ===========================
+// MENU TOGGLE
+// ===========================
+
 const toggle = document.querySelector(".toggle");
 const navigation = document.querySelector(".navigation");
 
 toggle.addEventListener("click", () => {
-
     toggle.classList.toggle("active");
     navigation.classList.toggle("active");
-
 });
-
 
 
 // ===========================
@@ -15,67 +16,73 @@ toggle.addEventListener("click", () => {
 // ===========================
 
 const modal = document.getElementById("profileModal");
-
 const closeBtn = document.querySelector(".close-btn");
 
-document.querySelectorAll(".profile-btn").forEach(button=>{
+const profileImage = document.getElementById("profileImage");
+const profileName = document.getElementById("profileName");
+const profileTown = document.getElementById("profileTown");
+const profileAge = document.getElementById("profileAge");
+const profileSalary = document.getElementById("profileSalary");
+const profileDaily = document.getElementById("profileDaily");
+const profileExperience = document.getElementById("profileExperience");
+const profileBadge = document.getElementById("profileBadge");
+const profileSkillTag = document.getElementById("profileSkillTag");
+const profileTribe = document.getElementById("profileTribe");
+const profileReligion = document.getElementById("profileReligion");
+const profileEducation = document.getElementById("profileEducation");
+const profileCourse = document.getElementById("profileCourse");
 
-    button.addEventListener("click",function(){
+// Optional if you add it to your HTML
+const profileType = document.getElementById("profileType");
 
-        const card=this.closest(".nanny-card");
+document.querySelectorAll(".profile-btn").forEach(button => {
 
-        document.getElementById("profileImage").src=card.dataset.image;
+    button.addEventListener("click", () => {
 
-        document.getElementById("profileName").textContent=card.dataset.name;
+        const card = button.closest(".nanny-card");
 
-        document.getElementById("profileTown").textContent=card.dataset.town;
+        profileImage.src = card.dataset.image;
+        profileImage.alt = card.dataset.name;
 
-        document.getElementById("profileAge").textContent=card.dataset.age;
+        profileName.textContent = card.dataset.name;
+        profileTown.textContent = card.dataset.town;
+        profileAge.textContent = card.dataset.age;
+        profileSalary.textContent = card.dataset.salary;
+        profileDaily.textContent = card.dataset.daily;
+        profileExperience.textContent = card.dataset.experience;
 
-        document.getElementById("profileSalary").textContent=card.dataset.salary;
+        profileBadge.textContent = card.dataset.type;
 
-        document.getElementById("profileDaily").textContent=card.dataset.daily;
+        if(profileType){
+            profileType.textContent = card.dataset.type;
+        }
 
-        document.getElementById("profileExperience").textContent=card.dataset.experience;
+        profileSkillTag.textContent = card.dataset.skill;
+        profileTribe.textContent = card.dataset.tribe;
+        profileReligion.textContent = card.dataset.religion;
+        profileEducation.textContent = card.dataset.education;
+        profileCourse.textContent = card.dataset.course;
 
-        document.getElementById("profileBadge").textContent=card.dataset.type;
-
-        document.getElementById("profileSkillTag").textContent=card.dataset.skill;
-
-        document.getElementById("profileTribe").textContent=card.dataset.tribe;
-
-        document.getElementById("profileReligion").textContent=card.dataset.religion;
-
-        document.getElementById("profileEducation").textContent=card.dataset.education;
-
-        document.getElementById("profileCourse").textContent=card.dataset.course;
-
-        modal.style.display="flex";
-
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
     });
 
 });
 
 
+// ===========================
+// CLOSE MODAL
+// ===========================
 
-// Close button
+closeBtn.addEventListener("click", closeModal);
 
-closeBtn.addEventListener("click",()=>{
-
-    modal.style.display="none";
-
-});
-
-
-
-// Click outside modal
-
-window.addEventListener("click",(e)=>{
-
-    if(e.target===modal){
-
-        modal.style.display="none";
-
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        closeModal();
     }
-
 });
+
+function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+}
