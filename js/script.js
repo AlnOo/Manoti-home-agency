@@ -164,30 +164,29 @@ window.addEventListener("click", e => {
 });
 
 //==========================
-// PREMIUM FILTER
+// DETECT CURRENT PAGE
 //==========================
 
-const searchFilter = document.getElementById("searchFilter");
+// Nanny Page
+const salaryFilter = document.getElementById("salaryFilter");
+const ageFilter = document.getElementById("ageFilter");
+const typeFilter = document.getElementById("typeFilter");
 
+// Professional Page
 const serviceFilter = document.getElementById("serviceFilter");
-
-const townFilter = document.getElementById("townFilter");
-
 const rateFilter = document.getElementById("rateFilter");
-
-const experienceFilter = document.getElementById("experienceFilter");
-
 const availabilityFilter = document.getElementById("availabilityFilter");
-
 const ratingFilter = document.getElementById("ratingFilter");
-
 const verifiedFilter = document.getElementById("verifiedFilter");
-
 const serviceTypeFilter = document.getElementById("serviceTypeFilter");
-
 const emergencyFilter = document.getElementById("emergencyFilter");
-
 const toolsFilter = document.getElementById("toolsFilter");
+
+// Common
+
+const searchFilter = document.getElementById("searchFilter");
+const townFilter = document.getElementById("townFilter");
+const experienceFilter = document.getElementById("experienceFilter");
 
 const resetFilters = document.getElementById("resetFilters");
 
@@ -195,11 +194,11 @@ const cards = document.querySelectorAll(".nanny-card");
 
 const noResults = document.getElementById("noResults");
 
-const salaryFilter = document.getElementById("salaryFilter");
+// Detect page
 
-const ageFilter = document.getElementById("ageFilter");
+const isNannyPage = salaryFilter !== null;
 
-const typeFilter = document.getElementById("typeFilter");
+const isProfessionalPage = serviceFilter !== null;
 
 function filterCards(){
 
@@ -215,11 +214,11 @@ function filterCards(){
 
         const town = card.dataset.town || "";
 
-        const rate = Number(card.dataset.rate || "");
+        const rate = Number(card.dataset.rate || 0);
 
-        const experience = Number(card.dataset.experience || "");
+        const experience = Number(card.dataset.experience || 0);
 
-        const rating = Number(card.dataset.rating || "");
+        const rating = Number(card.dataset.rating || 0);
 
         const verified = card.dataset.verified || "";
 
@@ -228,6 +227,12 @@ function filterCards(){
         const project = card.dataset.project || "";
 
         const tools = card.dataset.tools || "";
+
+        const salary = Number(card.dataset.salary || 0);
+
+        const age = Number(card.dataset.age || 0);
+
+        const type = card.dataset.type || "";
 
         // Search
 
