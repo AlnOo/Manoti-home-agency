@@ -8,7 +8,7 @@ Task outline
 2. pages
         1. Landing page
         2. Services page
-                1. House maid (live in, monthly commuting weekly trial maid)
+                1. House maid (live in, monthly, day burg, weekly trial maid)
                 2. Shamba boy
                 3. Home and Office cleaning
                 4. Carpert and upholstery cleaning
